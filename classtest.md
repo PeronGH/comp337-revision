@@ -26,7 +26,7 @@ If $A$ is an $m \times n$ matrix and $B$ is an $n \times p$ matrix, the dot prod
 
 - Only solution to $\lambda_1A_1 + \lambda_2A_2 + ... + \lambda_nA_n = 0$ is $\lambda_1 = \lambda_2 = ... = \lambda_n = 0$
 
-- **Proof:** List $\lambda_1A_1 + \lambda_2A_2 + ... + \lambda_nA_n = 0$ and say the only solution is $\lambda_1 = \lambda_2 = ... = \lambda_n = 0$.
+- **Proof:** Solve $\lambda_1A_1 + \lambda_2A_2 + ... + \lambda_nA_n = 0$ and the only solution is $\lambda_1 = \lambda_2 = ... = \lambda_n = 0$.
 
 ### Rank
 
@@ -34,15 +34,16 @@ Maximum number of linearly independent columns (or rows) in $A$.
 
 - **Computation:**
   - (square matrix only) If $\det(A) \neq 0$, the rank is the size of the matrix.
+  - (quick path) identify Rows that are linearly independant, which gives the minium value of the rank.
   - Gaussian Elimination to row-echelon form, then count non-zero rows.
   - Operations of **Gaussian Elimination**:
     1.  Swapping two rows.
     2.  Multiplying a row by a non-zero scalar.
     3.  Adding a multiple of one row to another row.
-  - **Row-Echelon Form** is defined by:
+  - **Row-Echelon Form** (e.g., $\begin{bmatrix} 1 & 2 & 3 \\ 0 & 4 & 5 \\ 0 & 0 & 6 \end{bmatrix}$) is defined by:
     1.  All non-zero rows are above any rows of all zeros.
     2.  The leading coefficient (the first non-zero number from the left, also called the *pivot*) of a non-zero row is always strictly to the right of the leading coefficient of the row above it.
-    3. All entries in a column below a leading entry are zeros.
+    3.  All entries in a column below a leading entry are zeros.
 
 ### Trace
 
