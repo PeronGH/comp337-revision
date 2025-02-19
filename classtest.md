@@ -121,3 +121,18 @@ A partial derivative is the derivative of a multi-variable function *with respec
 - **Precision**: $\frac{\text{TP}}{\text{TP} + \text{FP}}$
 - **Recall**: $\frac{\text{TP}}{\text{TP} + \text{FN}}$
 - **F-score**: $2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}} = \frac{2\text{TP}}{2\text{TP} + \text{FP} + \text{FN}}$
+
+- **Marco F-score:** Mean of F-scores for all classes
+
+## Multiclass Classification 
+
+### One-vs-One
+
+- Train $\frac{K(K-1)}{2}$ binary classifiers, one for each pair of classes.
+- Prediction: each classifier votes for a class, and the majority wins.
+
+### One-vs-Rest
+
+- Train $K$ binary classifiers, where $K$ is the number of classes.
+- $k$-th classifier is trained to distinguish class $k$ from all other classes.
+- Prediction: classify with the classifier that outputs the highest confidence score.
