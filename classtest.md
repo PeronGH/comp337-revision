@@ -34,7 +34,7 @@ Maximum number of linearly independent columns (or rows) in $A$.
 
 - **Computation:**
   - (square matrix only) If $\det(A) \neq 0$, the rank is the size of the matrix.
-  - (quick path) identify Rows that are linearly independant, which gives the minium value of the rank.
+  - (quick path) identify Rows that are linearly independent, which gives the minimum value of the rank.
   - Gaussian Elimination to row-echelon form, then count non-zero rows.
   - Operations of **Gaussian Elimination**:
     1.  Swapping two rows.
@@ -66,14 +66,14 @@ The sum of diagonal elements.
 - $\frac{d}{dx}c = 0$ ($c$ is constant)
 - $\frac{d}{dx}x^n=nx^{n-1}$
 - $\frac{d}{dx}e^x=e^x$
-- $\frac{d}{dx}\ln{x}=\frac{1}{x}$ (x > 0)
+- $\frac{d}{dx}\ln{x}=\frac{1}{x}$ ($x > 0$)
 - $\frac{d}{dx}\sin{x}=\cos{x}$
 - $\frac{d}{dx}\cos{x}=-\sin{x}$
 
 #### Differentiation Rules
 
 - $\frac{d}{dx}[f(x) \pm g(x)] = \frac{d}{dx}f(x) \pm \frac{d}{dx}g(x)$
-- $\frac{d}{dx}[f(x)g(x)] = f(x)g'(x) + g(x)f'(x)$
+- $\frac{d}{dx}[f(x)g(x)] = g(x)f'(x) + f(x)g'(x)$
 - $\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right] = \frac{g(x)f'(x) - f(x)g'(x)}{[g(x)]^2}$
 - $\frac{d}{dx} f(g(x)) = f'(g(x)) \cdot g'(x)$
 
