@@ -14,7 +14,7 @@
   - $u$: mean
   - $\sigma$: standard deviation
 
-## Mathematical Preliminaries
+## Linear Algebra
 
 ### Dot Product
 
@@ -59,9 +59,9 @@ The sum of diagonal elements.
   - Solve $\begin{bmatrix} a-\lambda_1 & b \\ c & d-\lambda_1 \end{bmatrix}\begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}$. Non-trivial solution is eigenvector $\mathbf{v_1}$.
   - Solve $\begin{bmatrix} a-\lambda_2 & b \\ c & d-\lambda_2 \end{bmatrix}\begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}$. Non-trivial solution is eigenvector $\mathbf{v_2}$.
 
-### Differential Calculus
+## Differential Calculus
 
-#### Common Derivatives
+### Common Derivatives
 
 - $\frac{d}{dx}c = 0$ ($c$ is constant)
 - $\frac{d}{dx}x^n=nx^{n-1}$
@@ -70,13 +70,42 @@ The sum of diagonal elements.
 - $\frac{d}{dx}\sin{x}=\cos{x}$
 - $\frac{d}{dx}\cos{x}=-\sin{x}$
 
-#### Differentiation Rules
+### Differentiation Rules
 
 - $\frac{d}{dx}[f(x) \pm g(x)] = \frac{d}{dx}f(x) \pm \frac{d}{dx}g(x)$
 - $\frac{d}{dx}[f(x)g(x)] = g(x)f'(x) + f(x)g'(x)$
 - $\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right] = \frac{g(x)f'(x) - f(x)g'(x)}{[g(x)]^2}$
 - $\frac{d}{dx} f(g(x)) = f'(g(x)) \cdot g'(x)$
 
-#### Partial Derivative
+### Partial Derivative
 
 A partial derivative is the derivative of a multi-variable function *with respect to only one of those variables*, **treating all other variables as constant**.
+
+## Perceptron
+
+### Algorithm
+
+**Input:**
+
+*   A dataset of labeled examples, $D = \{(\vec{X}_1, y_1), ..., (\vec{X}_n, y_n)\}$.
+*   Each $\vec{X}$ is a vector of features, and $x_0=1$.
+*   Each $y$ is a binary label: +1 or -1. It is defined $\text{sign}(\vec{W}^T\vec{X} + b)$.
+
+**Algorithm:**
+
+1.  **Initialization:** Weights $\vec{W}$ and bias $b$ are initialized to zero, and $w_0=b$.
+2.  **PerceptronTrain:** For a fixed number of iterations (or until convergence):
+    *   For each training example $(\vec{X}, y)$:
+        *   Compute the activation: $a = \vec{W}^T\vec{X} + b$.
+        *   If the prediction is incorrect ($y \cdot a \le 0$):
+            *   Update weights: $\vec{W} \leftarrow \vec{W} + y\vec{X}$.
+            *   Update bias: $b \leftarrow b + y$.
+
+**Output:**
+
+*   The trained weights, $\vec{W}$, and bias, $b$. These define the hyperplane that separates the classes.
+* The algorithm can detect incorrect predictions.
+
+### Geometric Interpretation
+
+- Linearly separable data can be perfectly divided by the perceptron's hyperplane.
