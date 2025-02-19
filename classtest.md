@@ -126,13 +126,13 @@ A partial derivative is the derivative of a multi-variable function *with respec
 
 ## Multiclass Classification 
 
-### One-vs-One
-
-- Train $\frac{K(K-1)}{2}$ binary classifiers, one for each pair of classes.
-- Prediction: each classifier votes for a class, and the majority wins.
-
 ### One-vs-Rest
 
 - Train $K$ binary classifiers, where $K$ is the number of classes.
 - $k$-th classifier is trained to distinguish class $k$ from all other classes.
 - Prediction: classify with the classifier that outputs the highest confidence score.
+
+### One-vs-One
+
+- Train $\frac{K(K-1)}{2}$ binary classifiers, one for each pair of classes.
+- Prediction: each classifier votes for a class, and the majority wins.
