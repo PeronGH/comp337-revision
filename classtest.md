@@ -58,3 +58,25 @@ The sum of diagonal elements.
   - The solutions, $\lambda_1$ and $\lambda_2$, are the eigenvalues.
   - Solve $\begin{bmatrix} a-\lambda_1 & b \\ c & d-\lambda_1 \end{bmatrix}\begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}$. Non-trivial solution is eigenvector $\mathbf{v_1}$.
   - Solve $\begin{bmatrix} a-\lambda_2 & b \\ c & d-\lambda_2 \end{bmatrix}\begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}$. Non-trivial solution is eigenvector $\mathbf{v_2}$.
+
+### Differential Calculus
+
+#### Common Derivatives
+
+- $\frac{d}{dx}c = 0$ ($c$ is constant)
+- $\frac{d}{dx}x^n=nx^{n-1}$
+- $\frac{d}{dx}e^x=e^x$
+- $\frac{d}{dx}\ln{x}=\frac{1}{x}$ (x > 0)
+- $\frac{d}{dx}\sin{x}=\cos{x}$
+- $\frac{d}{dx}\cos{x}=-\sin{x}$
+
+#### Differentiation Rules
+
+- $\frac{d}{dx}[f(x) \pm g(x)] = \frac{d}{dx}f(x) \pm \frac{d}{dx}g(x)$
+- $\frac{d}{dx}[f(x)g(x)] = f(x)g'(x) + g(x)f'(x)$
+- $\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right] = \frac{g(x)f'(x) - f(x)g'(x)}{[g(x)]^2}$
+- $\frac{d}{dx} f(g(x)) = f'(g(x)) \cdot g'(x)$
+
+#### Partial Derivative
+
+A partial derivative is the derivative of a multi-variable function *with respect to only one of those variables*, **treating all other variables as constant**.
