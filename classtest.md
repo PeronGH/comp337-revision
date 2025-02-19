@@ -109,3 +109,15 @@ A partial derivative is the derivative of a multi-variable function *with respec
 ### Geometric Interpretation
 
 - Linearly separable data can be perfectly divided by the perceptron's hyperplane.
+
+## Confusion Matrix
+
+|                        |   Actual Positive   |   Actual Negative   |
+| :--------------------- | :-----------------: | :-----------------: |
+| **Predicted Positive** | True Positive (TP)  | False Positive (FP) |
+| **Predicted Negative** | False Negative (FN) | True Negative (TN)  |
+
+- **Accuracy**: $\frac{\text{TP} + \text{TN}}{\text{TP} + \text{TN} + \text{FP} + \text{FN}}$
+- **Precision**: $\frac{\text{TP}}{\text{TP} + \text{FP}}$
+- **Recall**: $\frac{\text{TP}}{\text{TP} + \text{FN}}$
+- **F-score**: $2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}} = \frac{2\text{TP}}{2\text{TP} + \text{FP} + \text{FN}}$
