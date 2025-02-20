@@ -53,7 +53,7 @@ The sum of diagonal elements.
 
 - $Av = \lambda v$, where $v$ is the eigenvector and $\lambda$ is the eigenvalue.
 
-- **Computation (If A is 2×2):**
+- **Computation (If $A$ is 2×2):**
   - Solve $\text{det}(A - \lambda I) = \text{det}\begin{bmatrix} a-\lambda & b \\ c & d-\lambda \end{bmatrix} = (a-\lambda)(d-\lambda) - bc = 0$.
   - The solutions, $\lambda_1$ and $\lambda_2$, are the eigenvalues.
   - Solve $\begin{bmatrix} a-\lambda_1 & b \\ c & d-\lambda_1 \end{bmatrix}\begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}$. Non-trivial solution is eigenvector $\mathbf{v_1}$.
@@ -118,8 +118,8 @@ A partial derivative is the derivative of a multi-variable function *with respec
 | **Predicted Negative** | False Negative (FN) | True Negative (TN)  |
 
 - **Accuracy**: $\frac{\text{TP} + \text{TN}}{\text{TP} + \text{TN} + \text{FP} + \text{FN}}$
-- **Precision**: $\frac{\text{TP}}{\text{TP} + \text{FP}}$
-- **Recall**: $\frac{\text{TP}}{\text{TP} + \text{FN}}$
+- **Precision**: $\frac{\text{TP}}{\text{Predicted Positive}} = \frac{\text{TP}}{\text{TP} + \text{FP}}$
+- **Recall**: $\frac{\text{TP}}{\text{Actual Positive}} = \frac{\text{TP}}{\text{TP} + \text{FN}}$
 - **F-score**: $2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}} = \frac{2\text{TP}}{2\text{TP} + \text{FP} + \text{FN}}$
 
 - **Marco F-score:** Mean of F-scores for all classes
