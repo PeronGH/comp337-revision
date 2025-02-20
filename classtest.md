@@ -136,3 +136,29 @@ A partial derivative is the derivative of a multi-variable function *with respec
 
 - Train $\frac{K(K-1)}{2}$ binary classifiers, one for each pair of classes.
 - Prediction: each classifier votes for a class, and the majority wins.
+
+## Regularization
+
+- Regularization adds a penalty term based on the *magnitude* of the weights.
+
+- Assume a simple linear regression: $y = w^Tx + b$, where $y$ is the prediction, $x$ are the features, $w$ are the weights, and $b$ is the bias.
+- The origianl loss is MSE ($\sum_{i=1}^{n}(y_i - \hat{y_i})^2$).
+
+### L2 Regularization
+
+- $\text{Loss} = \sum_{i=1}^{n}(y_i - \hat{y_i})^2 + \lambda \sum_{j=1}^{m}w_j^2$
+
+### L1 Regularization
+
+- $\text{Loss} = \sum_{i=1}^{n}(y_i - \hat{y_i})^2 + \lambda \sum_{j=1}^{m}|w_j|$
+
+### L1+L2 Regularization
+
+- $\text{Loss} = \sum_{i=1}^{n}(y_i - \hat{y_i})^2 + \lambda_1 \sum_{j=1}^{m}|w_j| + \lambda_2 \sum_{j=1}^{m}w_j^2$
+
+## K-Nearest Neighbours
+
+1. Select the number ($k$) of nearest neighbors to consider.
+2. For a new, unlabeled data point, calculate its distance to all points in the training data.
+3. Identify the $k$ training data points closest to the new point.
+4. Assign the new point the class label that is most frequent among its $k$ nearest neighbors.
