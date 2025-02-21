@@ -73,8 +73,8 @@ The sum of diagonal elements.
 ### Differentiation Rules
 
 - $\frac{d}{dx}[f(x) \pm g(x)] = \frac{d}{dx}f(x) \pm \frac{d}{dx}g(x)$
-- $\frac{d}{dx}[f(x)g(x)] = g(x)f'(x) + f(x)g'(x)$
-- $\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right] = \frac{g(x)f'(x) - f(x)g'(x)}{[g(x)]^2}$
+- $\frac{d}{dx}[f(x)g(x)] = f'(x)g(x) + f(x)g'(x)$
+- $\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right] = \frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}$
 - $\frac{d}{dx} f(g(x)) = f'(g(x)) \cdot g'(x)$
 
 ### Partial Derivative
@@ -89,7 +89,7 @@ A partial derivative is the derivative of a multi-variable function *with respec
 
 *   A dataset of labeled examples, $D = \{(\vec{X}_1, y_1), ..., (\vec{X}_n, y_n)\}$.
 *   Each $\vec{X}$ is a vector of features, and $x_0=1$.
-*   Each $y$ is a binary label: +1 or -1. It is defined $\text{sign}(\vec{W}^T\vec{X} + b)$.
+*   Each $y$ is a binary label: $+1$ or $-1$. It is defined $\text{sign}(\vec{W}^T\vec{X} + b)$.
 
 **Algorithm:**
 
@@ -156,9 +156,22 @@ A partial derivative is the derivative of a multi-variable function *with respec
 
 - $\text{Loss} = \sum_{i=1}^{n}(y_i - \hat{y_i})^2 + \lambda_1 \sum_{j=1}^{m}|w_j| + \lambda_2 \sum_{j=1}^{m}w_j^2$
 
-## K-Nearest Neighbours
+## K-Nearest Neighbors
 
 1. Select the number ($k$) of nearest neighbors to consider.
 2. For a new, unlabeled data point, calculate its distance to all points in the training data.
 3. Identify the $k$ training data points closest to the new point.
 4. Assign the new point the class label that is most frequent among its $k$ nearest neighbors.
+
+### Vector Norms
+
+- **L0 Norm:** Counts non-zero elements.
+
+- **L1 Norm:** $\left \| x \right \|_{1} = \sum_{i=1}^{n}\left | x_{i} \right |$
+- **L2 Norm:** $\left \| x \right \|_{2} = \sqrt{\sum_{i=1}^{n} x_{i}^{2}}$
+- **L-Infinity Norm:** $||x||_\infty = \max_{i} |x_i|$
+
+### Similarity / Distance
+
+- **Cosine Similarity:** $\frac{A \cdot B}{||A||_2 ||B||_2}$
+- **Cosine Distance:** $1 - \text{Cosine Similarity}$
