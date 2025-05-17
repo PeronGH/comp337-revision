@@ -460,6 +460,7 @@ Given $\bar{X} = (x_1, \dots, x_d)^T$ and $\bar{Y} = (y_1, \dots, y_d)^T$:
 
 #### 13.5. Perceptron Training Algorithm
 `PerceptronTrain(Training data: D, MaxIter)`
+
 1.  Initialize weights and bias: $w_i = 0$ for all $i=1, \dots, d$; $b=0$.
     (If using notational trick, $w_i=0$ for $i=0, \dots, d$).
 2.  For `iter` = 1 to `MaxIter` do:
@@ -472,7 +473,8 @@ Given $\bar{X} = (x_1, \dots, x_d)^T$ and $\bar{Y} = (y_1, \dots, y_d)^T$:
 8.  Return $b, w_1, \dots, w_d$.
 
 #### 13.6. Perceptron Test Algorithm
-`PerceptronTest(b, w_1, \dots, w_d, \bar{X}_{test})`
+$\text{PerceptronTest}(b, w_1, \dots, w_d, \bar{X}_{test})$
+
 1.  $a = \bar{W}^T \bar{X}_{test} + b$.
 2.  Return $sign(a)$.
 
